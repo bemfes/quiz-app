@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 1);
+  background-color: #0b9aba;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+@layer base {
+  body {
+    @apply flex m-0 overflow-x-hidden min-w-[320px] min-h-screen place-items-center;
+  }
+}
+
+@layer components {
+  .button {
+    @apply bg-[#103f5e] rounded-md p-3 w-full cursor-pointer text-xl font-medium;
+  }
+  .button:disabled {
+    @apply opacity-70 cursor-not-allowed
+  }
+  .quiz-button {
+    @apply bg-white text-black rounded-md p-3 w-full cursor-pointer text-xl font-medium
+  }
+  #root {
+    @apply max-w-7xl w-[60%] mx-auto p-8 text-center max-md:w-full;
+  }
+}
+
+@layer utilities {
+  .right-answer {
+  @apply bg-[#3cd693] text-white;
+  }
+  .wrong-answer {
+    @apply bg-[#ff4a4ad9] text-white;
+  }
+}
+
+
+
+
+
